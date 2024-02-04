@@ -76,15 +76,15 @@
 // birsafar moment deb yozsam, bir safar ./hisob.js degan syntaxis ni sihlatyapman degan 
 // savol tug`iladi
 
-const Account =  require ('./account');
-Account.tellMeAboutClass();
-Account.tellMeTime();
+// const Account =  require ('./account');
+// Account.tellMeAboutClass();
+// Account.tellMeTime();
 
-const account = new Account ("Salov",500000, 717273747576777879);
-console.log(account);
+// const account = new Account ("Salov",500000, 717273747576777879);
+// console.log(account);
 
-account.giveMeDetails();
-account.makeDeposit(455000);
-account.withdrawMoney(50000);
-account.giveMeDetails();
-account.withdrawMoney(4000000);
+// account.giveMeDetails();
+// account.makeDeposit(455000);
+// account.withdrawMoney(50000);
+// account.giveMeDetails();
+// account.withdrawMoney(4000000);

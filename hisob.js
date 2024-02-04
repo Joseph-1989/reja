@@ -1,19 +1,19 @@
 
-const hisob ={};
-hisob.kopaytirish =(a,b)=>{
-    return a*b;
-};
+// const hisob ={};
+// hisob.kopaytirish =(a,b)=>{
+//     return a*b;
+// };
 
-hisob.bolish =(a,b)=>{
-    return a/b;
-};
+// hisob.bolish =(a,b)=>{
+//     return a/b;
+// };
 
-hisob.qoshish =(a,b)=>{
-    return a+b;
-};
+// hisob.qoshish =(a,b)=>{
+//     return a+b;
+// };
 
-hisob.ayirish =(a,b)=>{
-    return a-b;
-};
+// hisob.ayirish =(a,b)=>{
+//     return a-b;
+// };
 
-module.exports = hisob;
+// module.exports = hisob;
