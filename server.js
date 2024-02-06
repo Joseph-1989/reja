@@ -46,14 +46,14 @@ app.set("view engine", "ejs");
 // });
 // 4: Routing code
 app.post("/create-item", (req, res) => {
-  // console.log(req.body);
-  // res.json({test: "success"});
+  console.log(req.body);
+  res.json({ test: "success" });
 });
 
-app.get("/author", (req, res) => {
-  res.render("author", { user: user });
-  // bu yerda user degani bu oldinroq tepada fs da berilgan user.json ni author degan file bilan ulanyapti.
-});
+// app.get("/author", (req, res) => {
+//   res.render("author", { user: user });
+//   // bu yerda user degani bu oldinroq tepada fs da berilgan user.json ni author degan file bilan ulanyapti.
+// });
 
 // app.get("/hello", function(req, res){
 //  res.end(`<h1 style="background: red">HELLO WORLD by BekzodAli </h1>`);

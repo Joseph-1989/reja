@@ -1,4 +1,3 @@
-
 // const hisob ={};
 // hisob.kopaytirish =(a,b)=>{
 //     return a*b;
