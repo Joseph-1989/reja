@@ -1,8 +1,7 @@
 // Account js da functionlar orqali emas class orqali object hosil qilamiz
 // va u class ni modul package file orqali qanday qilib index ichida ishlatishni ko`rib chiqamiz
-// 
-// const moment  = require('moment');
 
+// const moment  = require('moment');
 
 // class Account{
 //     #amount; //amount private
@@ -43,7 +42,6 @@
 //         console.log(`This is current time: ${moment().format('YYYY MM DD HH:mm:ss')}.`);
 //     }
 
-
 // }
 
-// module.exports =  Account; 
+// module.exports =  Account;

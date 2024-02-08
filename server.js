@@ -50,21 +50,21 @@ app.post("/create-item", (req, res) => {
   res.json({ test: "success" });
 });
 
-// app.get("/author", (req, res) => {
-//   res.render("author", { user: user });
-//   // bu yerda user degani bu oldinroq tepada fs da berilgan user.json ni author degan file bilan ulanyapti.
-// });
+app.get("/author", (req, res) => {
+  res.render("author", { user: user });
+  // bu yerda user degani bu oldinroq tepada fs da berilgan user.json ni author degan file bilan ulanyapti.
+});
 
-// app.get("/hello", function(req, res){
-//  res.end(`<h1 style="background: red">HELLO WORLD by BekzodAli </h1>`);
-// });
-// app.get("/gift", function ( req , res ) {
-// res.end(`<h1>Siz sovg'alar bo'limidasiz</h1>`);
-// });
+app.get("/hello", function (req, res) {
+  res.end(`<h1 style="background: red">HELLO WORLD by BekzodAli </h1>`);
+});
+app.get("/gift", function (req, res) {
+  res.end(`<h1>Siz sovg'alar bo'limidasiz</h1>`);
+});
 
-// app.get("/sovga" ,function ( req , res ) {
-// res.end(`<h1>Siz sovg'alar bo'limida emassiz </h1>`);
-// });
+app.get("/sovga", function (req, res) {
+  res.end(`<h1>Siz sovg'alar bo'limida emassiz </h1>`);
+});
 
 app.get("/", function (req, res) {
   res.render("harid");

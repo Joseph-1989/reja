@@ -15,9 +15,9 @@
 
   <body>
     <div class="frame">
-      frame
+      
       <div class="main_frame">
-        main_frame
+      
         <div class="left_frame">
           <div class="left_1">
             <div class="left_1_1">
@@ -28,28 +28,33 @@
                 height="142px"
               />
             </div>
-            <div class="left_1_2">%=user.name%</div>
-            <div class="left_1_3">%=user.profession%</div>
+            <div class="left_1_2"><%=user.name%></div>
+            <div class="left_1_3"><%=user.profession%></div>
             <div class="left-icons">
               <a class="link_href" href="">
+                <div class="icon">
+                <img src="icon/Vector.svg" class="icon-1" />
+                </div>
+                </a>
+                <a class="link_href" href="">
                 <div class="icon">
                 <img src="icon/Vector-1.svg" class="icon-1" />
                 </div>
                 </a>
-                <a class="link_href" href="">
-                <div class="icon">
-                <img src="icon/Vector-2.svg" class="icon-1" />
-                </div>
-                </a>
                 <a glass="link_href" href="">
                 <div class="icon">
-                <img sre="icon/Vector-3.svg" class="icon-1" />
+                <img sre="icon/Vector-2.svg" class="icon-1" />
                 </div>
                 </a>
                 <a class="link_href" href="">
                 <div class="icon">
-                  <img src="icon/Vector-5.svg" class="icon-1"/>
+                  <img src="icon/Vector-3.svg" class="icon-1"/>
                 </div>
+                </a>
+                <a class="link_href" href="">
+                  <div class="icon">
+                    <img src="icon/Vector-4.svg" class="icon-1"/>
+                  </div>
                 </a>
                 <a class="link_href" href="">
                   <div class="icon">
@@ -58,18 +63,156 @@
                 </a>
             </div>
           </div>
-          <div class="marginer">marginer</div>
-          <div class="left_2">left_2</div>
-          <div class="marginer">marginer</div>
-          <div class="left_3">left_3</div>
-          <div class="marginer">marginer</div>
-          <div class="left_3">left_4</div>
-          <div class="marginer">marginer</div>
-          <div class="left_3">left_5</div>
-          <div class="marginer">marginer</div>
+          <div class="marginer"></div>
+          <div class="left_2">
+            <div class="form-row">
+              <div  class="form-label">Age:</div>
+              <div class="form-value">24</div>
+            </div>
+            <div class="form-row">
+              <div class="form-label" >Residence:</div>
+              <div class="form-value">BD</div>
+            </div>
+            <div class="form-row">
+              <div class="form-label">Freelance:</div>
+              <div class="form-value"><p class="text-available">Available</p></div>
+            </div>
+            <div class="form-row">
+              <div class="form-label">Address:</div>
+              <div class="form-value">Dhaka, Bangladesh</div>
+            </div>
+          </div>
+          <div class="marginer"></div>
+          <div class="left_3">
+            <h2>Languages</h2>
+            <div class="left_3_language"> 
+             <div class="text">
+              <p><%=user.languages[0]%></p> 
+              <p>100%</p>
+            </div>
+            <div class="progress-1">
+
+            </div>
+            <div class="left_3_language"> 
+              <div class="text">
+               <p><%=user.languages[1]%></p> 
+               <p>80%</p>
+             </div>
+             <div class="progress-2">
+ 
+             </div>
+             <div class="left_3_language"> 
+              <div class="text">
+               <p><%=user.languages[2]%></p> 
+               <p>60%</p>
+             </div>
+             <div class="progress-3">
+   
+             </div>
+          </div>
+          <div class="marginer">
+
+          </div>
+          <div class="left_4">
+            <h2>Skills</h2>
+            <div class="left_4_skills" >
+              <div class="text">
+              <p><%=user.skills[0]%></p>
+              <p>90%</p>
+              </div>
+              <div class="progressbar_1">
+
+              </div>
+            </div>
+            <div class="left_4_skills" >
+              <div class="text">
+              <p><%=user.skills[1]%></p>
+              <p>85%</p>
+              </div>
+              <div class="progressbar_2">
+
+              </div>
+            </div>
+            <div class="left_4_skills" >
+              <div class="text">
+              <p><%=user.skills[2]%></p>
+              <p>80%</p>
+              </div>
+              <div class="progressbar_3">
+
+              </div>
+            </div>
+            <div class="left_4_skills" >
+              <div class="text">
+              <p><%=user.skills[3]%></p>
+              <p>75%</p>
+              </div>
+              <div class="progressbar_4">
+
+              </div>
+            </div>
+            <div class="left_4_skills" >
+              <div class="text">
+              <p><%=user.skills[4]%></p>
+              <p>85%</p>
+              </div>
+              <div class="progressbar_5">
+
+              </div>
+            </div>
+          </div>
+          <div class="marginer"></div>
+          <div class="left_5">
+            <h2>Extra Skills</h2>
+<div class="icon-1">
+  <div class="icon-1-img"><img src="icon/extraskills.svg" alt="" ></div>
+  <p class="extraskills"><%=user.extra_skills[0]%></p>
+</div>
+<div class="icon-1">
+  <div class="icon-1-img"><img src="icon/extraskills.svg" alt=""></div>
+  <p class="extraskills"><%=user.extra_skills[1]%></p>
+</div>    
+<div class="icon-1">
+  <div class="icon-1-img"><img src="icon/extraskills.svg" alt=""></div>
+  <p class="extraskills"><%=user.extra_skills[2]%></p> 
+</div>
+<div class="icon-1">
+  <div class="icon-1-img"><img src="icon/extraskills.svg" alt=""></div>
+  <p class="extraskills"><%=user.extra_skills[3]%></p> 
+</div>
+</div>
+          <div class="marginer"></div>
         </div>
-        <div class="midd_frame">midd_frame</div>
-        <div class="right_frame">right_frame</div>
+        <div class="midd_frame">
+          <div class="about_me">
+            <div>
+              <h2><%=user.famous_words%></h2>
+              <p><%=user.about_me%></p>
+              <button>Hire Me</button>
+            </div>
+            <div class="big_image">
+              <img src="images/steve_big_image.png" alt="">
+            </div>
+          </div>
+          <div class="services">
+            <div class="info">
+              <h2>My services</h2>
+            <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. lorem ipsum</p>
+            </div>
+            <div class="box">
+              <div class="inner_box">
+                <img src="icon/Icons_coding.svg" alt="">
+                <h4>Web development</h4>
+                <p>blog, e-commerce</p>
+
+              </div>
+            </div>
+
+          </div>
+
+
+        </div>
+        <div class="right_frame"></div>
       </div>
     </div>
   </body>
