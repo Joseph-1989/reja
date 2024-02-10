@@ -4,25 +4,21 @@
 }
 
 .frame {
-  /* Home One page- Light */
-  position: relative;
-  width: 1440px;
-  height: 8063px;
-  /* border: 0;
-padding: 0;
-margin-top: 0; */
-  flex-direction: column;
-  /* Background */
-  background: rgb(209, 233, 247);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background: rgb(240, 240, 246);
 }
 
 .main_frame {
   position: relative;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
   width: 1440px;
   height: 1315px;
-  display: flex;
-  flex-direction: row;
-  /* Background */
   background: rgb(240, 240, 246);
 }
 
