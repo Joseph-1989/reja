@@ -50,8 +50,32 @@ app.set("view engine", "ejs");
 // });
 // 4: Routing code
 app.post("/create-item", (req, res) => {
+  console.log("user entered / create-item ");
   console.log(req.body);
-  res.json({ test: "success" });
+  const new_reja = req.body.reja;
+  db.collection("plans").insertOne({ reja: new_reja }, (err, data) => {
+    if (err) {
+      console.log(err);
+      res.end("Somthing went wrong");
+    } else {
+      res.end("Item created! ");
+    }
+  });
+});
+
+app.get("/", function (req, res) {
+  console.log("user entered /");
+  db.collection("plans")
+    .find()
+    .toArray((err, data) => {
+      if (err) {
+        console.log(err);
+        res.end("Somthing went wrong");
+      } else {
+        // console.log(data);
+        res.render("reja", { items: data });
+      }
+    });
 });
 
 app.get("/author", (req, res) => {
@@ -68,10 +92,6 @@ app.get("/gift", function (req, res) {
 
 app.get("/sovga", function (req, res) {
   res.end(`<h1>Siz sovg'alar bo'limida emassiz </h1>`);
-});
-
-app.get("/", function (req, res) {
-  res.render("reja");
 });
 
 module.exports = app;
