@@ -162,20 +162,111 @@ console.log("------------SETINTERVAL------------------");
 
 console.log("------------------------------");
 
-function countLetter(letter, word) {
-  // Boshlang'ich soni
-  let count = 0;
+// function countLetter(letter, word) {
+// Boshlang'ich soni
+// let count = 0;
 
-  // Har bir harfni tekshirish va sanash
-  for (let i = 0; i < word.length; i++) {
-    if (word[i] === letter) {
+// Har bir harfni tekshirish va sanash
+// for (let i = 0; i < word.length; i++) {
+//   if (word[i] === letter) {
+//     count++;
+//   }
+// }
+
+// Natijani qaytarish
+//   return count;
+// }
+
+// Misol: countLetter("e", "engineer") 3 ni qaytaradi
+// console.log(countLetter("a", "akmal"));
+
+console.log("------------------------------");
+
+// TASK_B
+
+function findNum(a) {
+  let count = 0;
+  for (let i = 0; i < a.length; i++) {
+    if (!isNaN(a[i])) {
       count++;
     }
   }
-
-  // Natijani qaytarish
   return count;
 }
+console.log(findNum("1tsdfs5fs8as78787dsa9"));
 
-// Misol: countLetter("e", "engineer") 3 ni qaytaradi
-console.log(countLetter("a", "akmal"));
+console.log("------------------------------");
+
+// ANIMALS CHELLENGE
+
+// const animal_list = [
+//   "fox",
+//   "ant",
+//   "bird",
+//   "lion",
+//   "wolf",
+//   "deer",
+//   "bear",
+//   "frog",
+//   "hen",
+//   "mole",
+//   "duck",
+//   "goat",
+//   "dog",
+//   "cat",
+//   "bat",
+//   "ck",
+//   "cow",
+// ];
+
+// function findAnimals(txt) {
+//   const foundAnimals = [];
+//   for (let i = 0; i < animal_list.length; i++) {
+//     const animal = animal_list[i];
+//     if (txt.includes(animal)) {
+//       foundAnimals.push(animal);
+//       // Metindan topilgan hayvon nomini o'chirish uchun
+//       // quyidagi qatorlarni izohga qo'yish mumkin.
+//       // txt ichidan topilgan hayvon nomini o'chirish uchun.
+//       // txt = txt.replace(new RegExp(animal, 'g'), ''); // Agar tekshirish uchun
+//     }
+//   }
+//   return foundAnimals;
+// }
+
+// const javob = findAnimals("drib");
+// console.log("Javob:", javob); // ["goat", "cat", "bird"]
+
+// ANIMALS CHELLENGE
+
+const animal_list = [
+  "fox",
+  "ant",
+  "bird",
+  "lion",
+  "wolf",
+  "deer",
+  "bear",
+  "frog",
+  "hen",
+  "mole",
+  "duck",
+  "goat",
+  "dog",
+  "cat",
+  "bat",
+  "cock",
+  "cow",
+];
+
+function findAnimals(txt) {
+  const name = [];
+  for (const animal of animal_list)
+    if (animal.split("").every((animal) => txt.includes(animal))) {
+      name.push(animal);
+    }
+
+  return name;
+}
+
+console.log(findAnimals("taclionleomwtabolfreed"));
