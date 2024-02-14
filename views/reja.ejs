@@ -14,7 +14,7 @@
   <body style="background-color: #b8bbd1">
     <!-- SHU YERDAN YOZASIZ -->
     <div class="container">
-      <h1 class="display-4 text-centre py-1">REJA VA MAQSADLAR</h1>
+      <h1 class="display-4 text-align: center py-1">REJA VA MAQSADLAR</h1>
       <div class="jumbotron p-3 shadow-sm">
         <form id="create-form" action="/create-item" method="POST">
           <div class="d-flex align-items-center">
@@ -44,18 +44,21 @@
               data-id="<%=item._id%>"
               class="edit-me btn btn-secondary btn-sm mr-1"
             >
-              O`zgartirish
+              O'zgartirish
             </button>
             <button
               data-id="<%=item._id%>"
               class="delete-me btn btn-danger btn-sm"
             >
-              O`chirish
+              O'chirish
             </button>
           </div>
         </li>
         <% }) %>
       </ul>
+      <button id="clean-all" src="btn btn-danger" style="border-radius: 20px">
+        Hamma Rejalarni O'chirib tashlash
+      </button>
     </div>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="/browser.js"></script>

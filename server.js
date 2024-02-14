@@ -8,8 +8,8 @@ const connectionString =
 mongodb.connect(
   connectionString,
   {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
+    useNewUrlParser: true, //option
+    useUnifiedTopology: true, //option
   },
   (err, client) => {
     if (err) {

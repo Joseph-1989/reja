@@ -8,6 +8,7 @@ const fs = require("fs"); // fs bizga user.json dagi ma`lumotlarni server.js ga 
 //MONGODB CONNECT
 
 const db = require("./server").db();
+const mongodb = require("mongodb");
 
 let user;
 fs.readFile("database/user.json", "utf8", (err, data) => {
@@ -50,11 +51,11 @@ app.set("view engine", "ejs");
 // });
 // 4: Routing code
 app.post("/create-item", (req, res) => {
-  console.log("user entered / create-item ");
-  console.log(req.body);
+  console.log("user entered /create-item ");
+  // console.log(req.body);
   const new_reja = req.body.reja;
   db.collection("plans").insertOne({ reja: new_reja }, (err, data) => {
-    console.log(data.ops[0]);
+    // console.log(data.ops[0]);
     res.json(data.ops[0]);
 
     // if (err) {
@@ -64,6 +65,41 @@ app.post("/create-item", (req, res) => {
     //   res.end("Item created! ");
     // }
   });
+});
+
+app.post("/delete-item", (req, res) => {
+  const id = req.body.id;
+  // console.log(`User deleted item with ID ${id}`);
+  // res.end("done");
+  db.collection("plans").deleteOne(
+    { _id: new mongodb.ObjectId(id) },
+    function (err, data) {
+      res.json({ state: "success" });
+    }
+  );
+});
+
+app.post("/edit-item", (req, res) => {
+  const data = req.body;
+  console.log(data);
+  db.collection("plans").findOneAndUpdate(
+    {
+      _id: new mongodb.ObjectId(data.id),
+    },
+    { $set: { reja: data.new_input } },
+    function (err, data) {
+      res.json({ state: "success" });
+    }
+  );
+  // res.end("Done!");
+});
+
+app.post("/delete-all", (req, res) => {
+  if (req.body.delete_all) {
+    db.collection("plans").deleteMany(function () {
+      res.json({ state: "deleted all plans, ya`ni hamma rejalar o`chirildi" });
+    });
+  }
 });
 
 app.get("/", function (req, res) {
@@ -98,6 +134,8 @@ app.get("/sovga", function (req, res) {
 });
 
 module.exports = app;
+// module.exports: This is a special object exposed in every Node.js module by default.
+// It determines what other modules can access from your current module.
 
 // git clean -df deb yozilsa qo`lda kiritgan folderlarni ham udalit qilib yuboradi
 // git reset --hard deb yozilsa oxirigi kiritgan o`zgarishimizni ham  qaytaradi

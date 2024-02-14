@@ -239,7 +239,43 @@ console.log("------------------------------");
 
 // ANIMALS CHELLENGE
 
-const animal_list = [
+// const animal_list = [
+//   "fox",
+//   "ant",
+//   "bird",
+//   "lion",
+//   "wolf",
+//   "deer",
+//   "bear",
+//   "frog",
+//   "hen",
+//   "mole",
+//   "duck",
+//   "goat",
+//   "dog",
+//   "cat",
+//   "bat",
+//   "cock",
+//   "cow",
+// ];
+
+// function findAnimals(txt) {
+//   const name = [];
+//   for (const animal of animal_list)
+//     if (animal.split("").every((animal) => txt.includes(animal))) {
+//       name.push(animal);
+//     }
+
+//   return name;
+// }
+
+// console.log(findAnimals("taclionleomwtabolfreed"));
+
+console.log("=================================");
+
+// ANIMALS CHELLENGE
+
+const animals = [
   "fox",
   "ant",
   "bird",
@@ -255,18 +291,36 @@ const animal_list = [
   "dog",
   "cat",
   "bat",
-  "cock",
+  "ck",
   "cow",
 ];
 
-function findAnimals(txt) {
-  const name = [];
-  for (const animal of animal_list)
-    if (animal.split("").every((animal) => txt.includes(animal))) {
-      name.push(animal);
-    }
+function createAnimalNames(letters) {
+  const sortedLetters = letters.split("").sort().join(""); // Sort letters alphabetically
+  const animalNameSets = new Set(); // Use a Set to avoid duplicates
+  console.log;
 
-  return name;
+  for (const animal of animals) {
+    const animalLetters = animal.split("").sort().join(""); // Sort letters of animal name
+    if (sortedLetters.includes(animalLetters[0])) {
+      // Check if first letter exists in input
+      // Check if all letters can be built from the input
+      let canBuild = true;
+      for (const letter of animalLetters) {
+        if (!sortedLetters.includes(letter)) {
+          canBuild = false;
+          break;
+        }
+      }
+      if (canBuild) {
+        animalNameSets.add(animal);
+      }
+    }
+  }
+
+  return Array.from(animalNameSets).join(", "); // Convert Set to comma-separated string
 }
 
-console.log(findAnimals("taclionleomwtabolfreed"));
+// Example usage:
+const result = createAnimalNames("oatnoiltacgdregit");
+console.log(result); // Output: "dog, goat"
