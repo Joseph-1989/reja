@@ -389,3 +389,25 @@ shop.qoldiq(); // hozir 20:40da 4ta non, 5ta lagmon va 2ta cola mavjud!
 shop.sotish("non", 3);
 shop.qabul("cola", 4);
 shop.qoldiq(); // hozir 20:50da 1ta non, 5ta lagmon va 6ta cola mavjud!
+
+console.log("-------------------------------");
+
+// TASK-D
+
+// Shunday function tuzing, u 2ta string parametr ega bolsin,
+// hamda agar har ikkala string bir hil harflardan iborat bolsa true aks holda false qaytarsin
+// MASALAN checkContent("mitgroup", "gmtiprou") return qiladi true;
+
+function checkContent(str1, str2) {
+  let result = true;
+  for (let i = 0; i < str1.length; i++) {
+    if (str1[i] !== str2[i]) {
+      result = false;
+      break;
+    }
+  }
+  return result;
+}
+
+console.log(checkContent("mitgroup", "gmtiprou")); //false
+console.log(checkContent("mitgroup", "mitgroup")); //true
