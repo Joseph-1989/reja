@@ -14,7 +14,7 @@
 
 // CALLBACK Function
 
-console.log("------------CALLBACK FUNCTION------------------");
+console.log("------------CALLBACK FUNCTION------------------\n");
 
 // function maslahatBering(a, callback) {
 //   if (typeof a !== "number") callback("insert a number", null);
@@ -34,7 +34,7 @@ console.log("------------CALLBACK FUNCTION------------------");
 // });
 // console.log("passed here 1");
 
-console.log("------------CALLBACK FUNCTION------------------");
+console.log("------------CALLBACK FUNCTION------------------\n");
 
 // function maslahatBering(a, callback) {
 //   if (typeof a !== "number") callback("insert a number", null);
@@ -62,7 +62,7 @@ console.log("------------CALLBACK FUNCTION------------------");
 
 // ASYNC Function
 
-console.log("==============DEFINITION PART======================");
+console.log("==============DEFINITION PART======================\n");
 
 // async function maslahatBering(a) {
 //   if (typeof a !== "number") throw new Error("insert a number");
@@ -79,7 +79,7 @@ console.log("==============DEFINITION PART======================");
 //   }
 // }
 
-console.log("================CALL PART====================");
+console.log("================CALL PART====================\n");
 
 // call via then/catch:
 
@@ -105,7 +105,7 @@ console.log("================CALL PART====================");
 // }
 // run();
 
-console.log("--------------ASYNC Promise function----------------");
+console.log("--------------ASYNC Promise function----------------\n");
 
 // Promise function
 
@@ -136,7 +136,7 @@ console.log("--------------ASYNC Promise function----------------");
 // }
 // run();
 
-console.log("------------SETINTERVAL------------------");
+console.log("------------SETINTERVAL------------------\n");
 
 // async function maslahatBering(a) {
 //   if (typeof a !== "number") throw new Error("insert a number");
@@ -160,7 +160,7 @@ console.log("------------SETINTERVAL------------------");
 // }
 // run();
 
-console.log("------------------------------");
+console.log("------------------------------\n");
 
 // function countLetter(letter, word) {
 // Boshlang'ich soni
@@ -180,7 +180,7 @@ console.log("------------------------------");
 // Misol: countLetter("e", "engineer") 3 ni qaytaradi
 // console.log(countLetter("a", "akmal"));
 
-console.log("------------------------------");
+console.log("------------------------------\n");
 
 // TASK_B
 
@@ -195,7 +195,7 @@ function findNum(a) {
 }
 console.log(findNum("1tsdfs5fs8as78787dsa9"));
 
-console.log("------------------------------");
+console.log("------------------------------\n ");
 
 // ANIMALS CHELLENGE
 
@@ -271,7 +271,7 @@ console.log("------------------------------");
 
 // console.log(findAnimals("taclionleomwtabolfreed"));
 
-console.log("=================================");
+console.log("=================================\n");
 
 // ANIMALS CHELLENGE
 
@@ -325,7 +325,7 @@ function createAnimalNames(letters) {
 const result = createAnimalNames("oatnoiltacgdregit");
 console.log(result); // Output: "dog, goat"
 
-console.log("---------------------------");
+console.log("---------------------------\n");
 
 // TASK-C
 
@@ -390,7 +390,7 @@ shop.sotish("non", 3);
 shop.qabul("cola", 4);
 shop.qoldiq(); // hozir 20:50da 1ta non, 5ta lagmon va 6ta cola mavjud!
 
-console.log("-------------------------------");
+console.log("-------------------------------\n");
 
 // TASK-D
 
@@ -398,16 +398,43 @@ console.log("-------------------------------");
 // hamda agar har ikkala string bir hil harflardan iborat bolsa true aks holda false qaytarsin
 // MASALAN checkContent("mitgroup", "gmtiprou") return qiladi true;
 
-function checkContent(str1, str2) {
+function check(str1, str2) {
   let result = true;
+  console.log(str1 + "\n" + str2);
   for (let i = 0; i < str1.length; i++) {
+    console.log(str1[i] + "-" + str2[i]);
     if (str1[i] !== str2[i]) {
+      console.log(str1[i], str2[i]);
       result = false;
       break;
     }
   }
   return result;
+  console.log(str1, str2);
 }
 
-console.log(checkContent("mitgroup", "gmtiprou")); //false
-console.log(checkContent("mitgroup", "mitgroup")); //true
+console.log(check("mitgroup", "gmtiprou")); //false
+console.log(check("mitgroup", "mitgroup")); //true
+
+console.log("-------------------------------\n");
+
+// TASK-D
+
+function checkContent(str1, str2) {
+  // Qandaydir usulda harflarni teskari tartibda chiqarish
+  const sortedStr1 = str1.split("").sort().join("");
+  const sortedStr2 = str2.split("").sort().join("");
+
+  console.log(str1.split(""), "split", "\n");
+  console.log(str1.split("").sort(), "split and sort", "\n");
+  console.log(str1.split("").sort().join(""), "join", "\n");
+  console.log("==========================================");
+  console.log(str2.split(""), "split", "\n");
+  console.log(str2.split("").sort(), "split and sort", "\n");
+  console.log(str2.split("").sort().join(""), "join", "\n");
+  // Ikkala stringni teskari tartibdagi harflari solishtirish
+  return sortedStr1 === sortedStr2;
+}
+
+console.log(checkContent("mitgroup", "gmtiprou")); // true
+console.log(checkContent("hello", "world")); // false
