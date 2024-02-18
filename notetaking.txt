@@ -1,0 +1,10 @@
+Bu yerda kkli narsalarni yozib boraman
+
+Pm2 dagi commands
+
+
+1. pm2 stop 1  // bu command bizni local serverimizni to`xtatib oladi. Local serverni delete qilishdan oldin albatta to`xtatib olish shart.
+2. pm2 delete 1 // bu command local serverimizni delete qiladi. 
+3. pm2 start 
+4. pm2 list // pm2 ls
+5. 
