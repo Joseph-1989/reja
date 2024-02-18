@@ -5,7 +5,7 @@ Pm2 dagi commands
 
 1. pm2 stop 1  // bu command bizni local serverimizni to`xtatib oladi. Local serverni delete qilishdan oldin albatta to`xtatib olish shart.
 2. pm2 delete 1 // bu command local serverimizni delete qiladi. 
-3. pm2 start 
+3. npm list -g // bu npm da qanaqa package lar ustanovka bo`lganini ko`rsatib beradi
 4. pm2 list // pm2 ls
 5. cd .. // In the macOS Terminal, you can use the cd command to go to the previous directory by using the special directory name ... 
 6. cd ../..  // This command takes you up one level in the directory hierarchy. If you want to go back multiple levels, you can use additional .. segments separated by slashes. For example, to go up two levels:
@@ -13,3 +13,11 @@ Pm2 dagi commands
 8. pm2 start your_app.js --name JosephReja  // It looks like you are managing processes using a process manager like PM2, and you want to add a new process with the name "JosephReja." To do that, you can use the pm2 command to start a new Node.js application or any other process. Here's an example of how you can do it:
 9. rm -r /home/MIT11/joseph // To delete the "joseph" directory in the macOS Terminal, you can use the rm command with the -r (recursive) option since it contains subdirectories or files. Be cautious when using rm -r as it will delete the specified directory and all its contents. Here's the command to remove the "joseph" directory:
 10. rm -rf /home/MIT11/joseph // Make sure to verify the path and confirm that you want to delete the "joseph" directory and its contents before executing the command. If you want to avoid being prompted for confirmation, you can use the -f (force) option:
+11. cd ~  // To navigate to your home directory in the macOS Terminal, you can use the cd command with the tilde (~) character. Here's the command:
+12: cd /Users/your_username  // Alternatively, you can use the absolute path to your home directory:
+13. cd /Users/username // Both commands will take you to your home directory. If you are the root user, your home directory will typically be /var/root. If you want to go to the home directory of a specific user, you can specify the username:
+14. pm2 monit // bu pm2 ni monitorini ko`rsatadi
+15. pm2 logs // bu barcha ishga tushgan portlarni ko`rsatadi
+16. pm2 start app.js --name "freecodecamp" // bu command nomadagi serverimizi ba'zgartirish imkonini beradi va nomani "
+17. pm2 start app.js --name "server" // bu server nomli serverimizni ba`shlangan holda yaratdiyabdi.
+18. pwd   //  the pwd command in the macOS Terminal stands for "Print Working Directory." When you run the pwd command, it displays the full path of the current working directory (the directory you are currently in within the file system).
