@@ -1,28 +1,30 @@
-// Shunday function tuzing, u bitta string argumentni qabul qilib osha stringni teskari qilib return qilsin.
-// MASALAN: getReverse("hello") return qilsin "olleh"
+// TASK-F:
 
-function getReverse(str) {
-  let newStr = "";
-  console.log("\n=!=-!=-!=-!=-!=-!=-!\n");
-  console.log("str:", str);
-  console.log("\n=!=-!=-!=-!=-!=-!=-!\n");
-  console.log("newStr:", newStr);
-  console.log("\n=!=-!=-!=-!=-!=-!=-!\n");
-  for (let i = str.length - 1; i >= 0; i--) {
-    console.log("i: ", i);
-    console.log("\n=!=-!=-!=-!=-!=-!=-!\n");
-    console.log("str[i]: ", str[i]);
-    console.log("\n=!=-!=-!=-!=-!=-!=-!\n");
-    console.log("newStr:", newStr);
-    console.log("\n=!=-!=-!=-!=-!=-!=-!\n");
-    newStr += str[i];
+// Shunday findDoublers function tuzing, unga faqat bitta string argument pass bolib,
+// agar stringda bir hil harf qatnashgan bolsa true, qatnashmasa false qaytarishi kerak.
+// MASALAN: getReverse("hello") return true return qiladi
+
+function findDoublers(string) {
+  let count = {};
+
+  for (const char of string) {
+    if (!count[char]) {
+      count[char] = 1;
+    } else {
+      count[char]++;
+    }
   }
-  return newStr;
+
+  for (const key in count) {
+    if (count[key] > 1) {
+      return true;
+    }
+  }
+  return false;
 }
 
 console.log("\n=!=-!=-!=-!=-!=-!=-!\n");
-console.log(getReverse("Hello"));
-console.log(getReverse("Akmal"));
-console.log(getReverse("Onam"));
-console.log(getReverse("qora"));
-console.log("\n=!=-!=-!=-!=-!=-!=-!\n");
+console.log(findDoublers("Hello")); // true
+console.log(findDoublers("Akmal")); // false
+console.log(findDoublers("Onam")); // true
+console.log(findDoublers("qora")); // false
